@@ -1,0 +1,18 @@
+---
+layout: page
+title: All the Chinese Artists
+---
+
+{% for artist in site.data.artists %}
+    
+<ul>
+    {{ artist.EnglishName }}
+    <li>{{ artist.ChineseName}}  {{ artist.Gender }}</li>
+    From: {{ artist.Nationality }}
+    <li>{% for i in (1..3) %}
+      <img src="/media/china-artworks/{{artist.EnglishName | replace: ' ' , '_' }}_{{artist.ChineseName}}/{{ artist.EnglishName | replace: ' ' , '_' }}_0{{i}}.jpg"> 
+        {{ i }}
+      {% endfor %}
+    </li>
+</ul>
+{% endfor %}

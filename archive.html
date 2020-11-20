@@ -1,0 +1,12 @@
+---
+layout: page
+title: Internet Arcade
+---
+
+{% for page in site.archives %}
+    <h2>{{ page.name }}: {{ page.url }}</h2>
+    <ul>
+        <li>{{ page.date_of_visit }}</li>
+        <li><img src="{{ page.screenshot_image }}" ></li>
+    </ul>
+{% endfor %}
